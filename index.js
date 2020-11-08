@@ -96,6 +96,18 @@ const agreements = [
             { word: "notic", tag: "VB" },
         ],
     },
+    {
+        topic:
+            "The service can sell or otherwise transfer your personal data as part of a bankruptcy proceeding or other type of financial transaction.",
+        tokens: [
+            { word: "sell", tag: "VB" },
+            { word: "transfer", tag: "VB" },
+            { word: "data", tag: "N" },
+            { word: "bankruptci", tag: "N" },
+            { word: "financi", tag: "ADJ" },
+            { word: "transact", tag: "N" },
+        ],
+    },
 ];
 
 //Middlewares
@@ -158,14 +170,12 @@ app.post("/upload", (req, res) => {
         if (3 <= score && score <= 4) response.score = "Mediocre";
         if (5 <= score) response.score = "Awful";
 
-        console.log(response);
         res.status(200).json(response);
     });
 });
 
-const PORT = process.env.PORT || 5000;
 
 //Listeners
-app.listen(PORT, () => {
-    console.log(`app is running on port ${PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log(`app is running on port ${process.env.PORT}`);
 });
