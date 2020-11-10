@@ -1,5 +1,7 @@
 # react-tos-simplify-api
 
+Node.js and express.js backend for [react-tos-simplify](https://github.com/andreibudoi/react-tos-simplify). Automatically analyses and rates Terms & Conditions or Privacy Policies pdf documents and finds relevant policies for the user, using an nlp library.
+
 ## Quick Start 🚀
 
 ### Clone repo
